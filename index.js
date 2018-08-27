@@ -16,18 +16,24 @@ const getInsertionNodeElem = function(insertionNode, insertionTraversal, btn) {
   if(!insertionNode){
     return btn.parentNode;
   }
-  else { // string
+
+  if(typeof insertionNode === 'function') {
     if(insertionTraversal) {
-      // TODO:
-      // https://github.com/nathanvda/cocoon/blob/master/app/assets/javascripts/cocoon.js#L32
-      // data-association-insertion-traversal: the jquery traversal method to
-      // allow node selection relative to the link. closest, next, children, etc.
-      // return $this[insertionTraversal](insertionNode);
-      return null;
+      console.warn('association-insertion-traversal is ignored, because association-insertion-node is given as a function.');
     }
-    else {
-      return document.querySelector(insertionNode);
-    }
+    return insertionNode(btn);
+  }
+
+  if(insertionTraversal) {
+    // TODO:
+    // https://github.com/nathanvda/cocoon/blob/master/app/assets/javascripts/cocoon.js#L32
+    // data-association-insertion-traversal: the jquery traversal method to
+    // allow node selection relative to the link. closest, next, children, etc.
+    // return $this[insertionTraversal](insertionNode);
+    return null;
+  }
+  else {
+    return document.querySelector(insertionNode);
   }
 };
 
