@@ -1,6 +1,6 @@
 # cocoon-vanilla-js (private)
 
-A vanilla JS replacement for (Rails) Cocoon's jQuery script
+A vanilla JS replacement for (Rails) [Cocoon](https://github.com/nathanvda/cocoon)'s jQuery script
 
 
 ## Usage
