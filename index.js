@@ -100,7 +100,7 @@ const addFieldsHandler = (btn) => {
 
       insertionNodeElem.insertAdjacentHTML(insertionMethod, node);
       insertionNodeElem.dispatchEvent(
-        CustomEvent('cocoon:after-insert', {detail: node})
+        new CustomEvent('cocoon:after-insert', {detail: node})
       );
     }
   });
@@ -139,7 +139,7 @@ const removeFieldsHandler = (btn) => {
       }
 
       triggerNode.dispatchEvent(
-        CustomEvent('cocoon:after-remove', {detail: nodeToDelete})
+        new CustomEvent('cocoon:after-remove', {detail: nodeToDelete})
       );
     }, timeout);
   }
