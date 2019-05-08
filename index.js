@@ -100,7 +100,7 @@ const addFieldsHandler = (btn) => {
 
       insertionNodeElem.insertAdjacentHTML(insertionMethod, node);
       insertionNodeElem.dispatchEvent(
-        CustomEvent('cocoon:before-insert', {detail: node})
+        CustomEvent('cocoon:after-insert', {detail: node})
       );
     }
   });
