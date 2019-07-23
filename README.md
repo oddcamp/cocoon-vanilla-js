@@ -1,14 +1,14 @@
-# cocoon-vanilla-js (private)
+# cocoon-vanilla-js
 
 A vanilla JS replacement for (Rails) [Cocoon](https://github.com/nathanvda/cocoon)'s jQuery script
 
 
 ## Usage
 
-Replace `<token>` and `<commit>` with the corresponding values:
+Replace `<commit>` with the corresponding values:
 
 ```
-yarn add git+https://<token>:x-oauth-basic@github.com/kollegorna/cocoon-vanilla-js.git#<commit>
+yarn add git+https://github.com/kollegorna/cocoon-vanilla-js.git#<commit>
 ```
 
 Import as ES6 module:
