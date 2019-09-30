@@ -78,7 +78,7 @@ const addFieldsHandler = (btn) => {
   }
 
   new_contents.forEach((node) => {
-    const event = new CustomEvent('cocoon:before-insert', {detail: node});
+    const event = new CustomEvent('cocoon:before-insert', {detail: node, bubbles: true, cancelable: true});
     insertionNodeElem.dispatchEvent(event);
 
     if(!event.defaultPrevented) {
@@ -100,7 +100,7 @@ const addFieldsHandler = (btn) => {
 
       insertionNodeElem.insertAdjacentHTML(insertionMethod, node);
       insertionNodeElem.dispatchEvent(
-        new CustomEvent('cocoon:after-insert', {detail: node})
+        new CustomEvent('cocoon:after-insert', {detail: node, bubbles: true, cancelable: true})
       );
     }
   });
@@ -119,7 +119,7 @@ const removeFieldsHandler = (btn) => {
   const nodeToDelete = btn.closest(`.${wrapperClass}`);
   const triggerNode = nodeToDelete.parentNode;
 
-  const event = new CustomEvent('cocoon:before-remove', {detail: nodeToDelete});
+  const event = new CustomEvent('cocoon:before-remove', {detail: nodeToDelete, bubbles: true, cancelable: true});
   triggerNode.dispatchEvent(event);
 
   if(!event.defaultPrevented) {
@@ -139,7 +139,7 @@ const removeFieldsHandler = (btn) => {
       }
 
       triggerNode.dispatchEvent(
-        new CustomEvent('cocoon:after-remove', {detail: nodeToDelete})
+        new CustomEvent('cocoon:after-remove', {detail: nodeToDelete, bubbles: true, cancelable: true})
       );
     }, timeout);
   }
