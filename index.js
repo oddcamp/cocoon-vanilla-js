@@ -148,7 +148,9 @@ const removeFieldsHandler = (btn) => {
 document.addEventListener('click', (e) => {
   if(
     e.target.matches('.remove_fields.dynamic') ||
-    e.target.matches('.remove_fields.existing')
+    e.target.matches('.remove_fields.existing') ||
+    e.target.parentNode.matches('.remove_fields.dynamic') || // Alteracao para funcionar quando o botao de 'Remover' do cocoon possui tags HTML dentro dele, e nao somente o texto. Porque nesses casos o 'click' pode ser feito nessas tags, que nao possuem as classes CSS 'remove_fields' e 'dynamic/existing'. Ex: tag <i> com classes do font-awesome.
+    e.target.parentNode.matches('.remove_fields.existing')
   ) {
     e.preventDefault();
     e.stopPropagation();
