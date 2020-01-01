@@ -155,8 +155,9 @@ document.addEventListener('click', (e) => {
     removeFieldsHandler(e.target);
   }
   else if(
-    e.target.parentNode.matches('.remove_fields.dynamic') ||
-    e.target.parentNode.matches('.remove_fields.existing')
+    e.target.parentNode &&
+    e.target.parentNode.matches &&
+    (e.target.parentNode.matches('.remove_fields.dynamic') || e.target.parentNode.matches('.remove_fields.existing'))
   ) {
     e.preventDefault();
     e.stopPropagation();
