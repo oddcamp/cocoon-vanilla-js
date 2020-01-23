@@ -99,6 +99,9 @@ const addFieldsHandler = (btn) => {
       }
 
       insertionNodeElem.insertAdjacentHTML(insertionMethod, node);
+      
+      Array.from((new DOMParser()).parseFromString(node, 'text/html').body.firstChild.getElementsByTagName('script')).forEach(script => { eval(script.text) })
+      
       insertionNodeElem.dispatchEvent(
         new CustomEvent('cocoon:after-insert', {detail: node, bubbles: true, cancelable: true})
       );
