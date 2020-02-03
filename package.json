@@ -1,5 +1,5 @@
 {
-  "name": "cocoon-vanilla-js",
+  "name": "@kollegorna/cocoon-vanilla-js",
   "version": "1.0.2",
   "description": "A vanilla JS replacement for (Rails) Cocoon's jQuery script",
   "main": "index.js",
