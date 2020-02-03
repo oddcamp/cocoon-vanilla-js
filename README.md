@@ -2,19 +2,18 @@
 
 A vanilla JS replacement for (Rails) [Cocoon](https://github.com/nathanvda/cocoon)'s jQuery script
 
-
 ## Usage
 
 Replace `<commit>` with the corresponding values:
 
 ```
-yarn add git+https://github.com/kollegorna/cocoon-vanilla-js.git#<commit>
+yarn add @kollegorna/cocoon-vanilla-js
 ```
 
 Import as ES6 module:
 
 ```js
-import 'cocoon-vanilla-js'
+import "cocoon-vanilla-js";
 ```
 
 ## Notes
