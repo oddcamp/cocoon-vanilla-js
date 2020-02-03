@@ -1,0 +1,30 @@
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install nodejs dependencies
+        run: sudo apt-get install gpg dirmngr
+
+      - name: Install nodejs
+        uses: asdf-vm/actions/install@v1.0.0
+        with:
+          before_install: bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Publish the package to npmjs
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm config set scope "@kollegorna"
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
