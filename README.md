@@ -4,7 +4,7 @@ A vanilla JS replacement for (Rails) [Cocoon](https://github.com/nathanvda/cocoo
 
 ## Usage
 
-Replace `<commit>` with the corresponding values:
+Run:
 
 ```
 yarn add @kollegorna/cocoon-vanilla-js
