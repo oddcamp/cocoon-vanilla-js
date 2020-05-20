@@ -7,7 +7,7 @@ A vanilla JS replacement for (Rails) [Cocoon](https://github.com/nathanvda/cocoo
 Run:
 
 ```
-yarn add @kollegorna/cocoon-vanilla-js
+yarn add @Belibaste/cocoon-vanilla-js
 ```
 
 Import as ES6 module:

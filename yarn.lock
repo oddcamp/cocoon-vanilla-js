@@ -2,6 +2,6 @@
 # yarn lockfile v1
 
 
-"js-utils@git+https://8265015e18616ae2d58e38f4fd9ca111b8beaff8:x-oauth-basic@github.com/kollegorna/js-utils.git#6507589":
+"js-utils@git+https://8265015e18616ae2d58e38f4fd9ca111b8beaff8:x-oauth-basic@github.com/Belibaste/js-utils.git#6507589":
   version "1.0.0"
-  resolved "git+https://8265015e18616ae2d58e38f4fd9ca111b8beaff8:x-oauth-basic@github.com/kollegorna/js-utils.git#6507589ae81c91ff2db72d7c4905a3d2d52674f9"
+  resolved "git+https://8265015e18616ae2d58e38f4fd9ca111b8beaff8:x-oauth-basic@github.com/Belibaste/js-utils.git#6507589ae81c91ff2db72d7c4905a3d2d52674f9"

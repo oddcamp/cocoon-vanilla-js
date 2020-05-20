@@ -1,18 +1,18 @@
 {
-  "name": "@kollegorna/cocoon-vanilla-js",
+  "name": "@Belibaste/cocoon-vanilla-js",
   "version": "1.0.3",
   "description": "A vanilla JS replacement for (Rails) Cocoon's jQuery script",
   "main": "index.js",
   "engines": {
     "node": "<=9.11.2"
   },
-  "repository": "git+https://github.com/kollegorna/cocoon-vanilla-js.git",
+  "repository": "git+https://github.com/Belibaste/cocoon-vanilla-js.git",
   "author": "Kollegorna",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kollegorna/cocoon-vanilla-js/issues"
+    "url": "https://github.com/Belibaste/cocoon-vanilla-js/issues"
   },
-  "homepage": "https://github.com/kollegorna/cocoon-vanilla-js#readme",
+  "homepage": "https://github.com/Belibaste/cocoon-vanilla-js#readme",
   "devDependencies": {},
   "dependencies": {}
 }
