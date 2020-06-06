@@ -2,7 +2,7 @@ name: Node.js Package
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   build:
@@ -13,10 +13,14 @@ jobs:
       - name: Install nodejs dependencies
         run: sudo apt-get install gpg dirmngr
 
-      - name: Install nodejs
-        uses: asdf-vm/actions/install@v1.0.0
+      - name: Read .tool-versions
+        uses: marocchino/tool-versions-action@v1
+        id: versions
+
+      - name: Set up Node
+        uses: actions/setup-node@v1
         with:
-          before_install: bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+          node-version: ${{ steps.versions.outputs.nodejs}}
 
       - name: Install dependencies
         run: yarn install
@@ -35,4 +39,4 @@ jobs:
           npm config set @kollegorna:registry https://npm.pkg.github.com/
           npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GPR_AUTH_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
