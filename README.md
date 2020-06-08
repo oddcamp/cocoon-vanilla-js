@@ -13,7 +13,7 @@ yarn add @kollegorna/cocoon-vanilla-js
 Import as ES6 module:
 
 ```js
-import "cocoon-vanilla-js";
+import "@kollegorna/cocoon-vanilla-js";
 ```
 
 ## Notes
