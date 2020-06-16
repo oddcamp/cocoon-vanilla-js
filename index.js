@@ -107,10 +107,10 @@ const addFieldsHandler = (btn) => {
 };
 
 document.addEventListener('click', (e) => {
-  if(e.target.matches('.add_fields')) {
+  if(e.target.closest('.add_fields')) {
     e.preventDefault();
     e.stopPropagation();
-    addFieldsHandler(e.target);
+    addFieldsHandler(e.target.closest('.add_fields'));
   }
 });
 
@@ -147,8 +147,8 @@ const removeFieldsHandler = (btn) => {
 
 document.addEventListener('click', (e) => {
   if(
-    e.target.matches('.remove_fields.dynamic') ||
-    e.target.matches('.remove_fields.existing')
+    e.target.closest('.remove_fields.dynamic') ||
+    e.target.closest('.remove_fields.existing')
   ) {
     e.preventDefault();
     e.stopPropagation();
