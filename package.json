@@ -1,6 +1,6 @@
 {
   "name": "@pedrofurtado/cocoon-vanilla-js",
-  "version": "1.0.5",
+  "version": "1.0.5-patched",
   "description": "A vanilla JS replacement for (Rails) Cocoon's jQuery script",
   "main": "index.js",
   "engines": {
