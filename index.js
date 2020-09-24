@@ -157,7 +157,7 @@ document.addEventListener('click', (e) => {
 });
 
 const hideFields = () => {
-  [...document.querySelectorAll('.remove_fields.existing.destroyed')].forEach((btn) => {
+  Array.from(document.querySelectorAll('.remove_fields.existing.destroyed')).forEach((btn) => {
     const wrapperClass = btn.getAttribute('data-wrapper-class') || 'nested-fields';
     btn.closest(`.${wrapperClass}`).style.display = 'none';
   });
