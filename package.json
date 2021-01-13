@@ -1,15 +1,15 @@
 {
-  "name": "@kollegorna/cocoon-vanilla-js",
+  "name": "@oddcamp/cocoon-vanilla-js",
   "version": "1.0.7",
   "description": "A vanilla JS replacement for (Rails) Cocoon's jQuery script",
   "main": "index.js",
-  "repository": "git+https://github.com/kollegorna/cocoon-vanilla-js.git",
-  "author": "Kollegorna",
+  "repository": "git+https://github.com/oddcamp/cocoon-vanilla-js.git",
+  "author": "Odd Camp",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kollegorna/cocoon-vanilla-js/issues"
+    "url": "https://github.com/oddcamp/cocoon-vanilla-js/issues"
   },
-  "homepage": "https://github.com/kollegorna/cocoon-vanilla-js#readme",
+  "homepage": "https://github.com/oddcamp/cocoon-vanilla-js#readme",
   "devDependencies": {},
   "dependencies": {}
 }
