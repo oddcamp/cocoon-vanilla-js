@@ -28,7 +28,7 @@ jobs:
       - name: Publish the package to npmjs
         run: |
           npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-          npm config set @kollegorna:registry https://registry.npmjs.org/
+          npm config set @oddcamp:registry https://registry.npmjs.org/
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
@@ -36,7 +36,7 @@ jobs:
       - name: Publish the package to GPR
         run: |
           npm config set //npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN
-          npm config set @kollegorna:registry https://npm.pkg.github.com/
+          npm config set @oddcamp:registry https://npm.pkg.github.com/
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
