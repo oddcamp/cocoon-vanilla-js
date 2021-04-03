@@ -146,13 +146,14 @@ const removeFieldsHandler = (btn) => {
 };
 
 document.addEventListener('click', (e) => {
-  if(
+  const btn =
     e.target.closest('.remove_fields.dynamic') ||
-    e.target.closest('.remove_fields.existing')
-  ) {
+    e.target.closest('.remove_fields.existing');
+
+  if(btn) {
     e.preventDefault();
     e.stopPropagation();
-    removeFieldsHandler(e.target);
+    removeFieldsHandler(btn);
   }
 });
 
