@@ -146,7 +146,7 @@ const removeFieldsHandler = (btn) => {
         nodeToDelete.parentNode.removeChild(nodeToDelete);
       }
       else {
-        const input = nodeToDelete.querySelector('input[type=hidden][name*="[_destroy]"');
+        const input = nodeToDelete.querySelector('input[type=hidden][name*="[_destroy]"]');
         if(input) {
           input.value = 1;
         }
